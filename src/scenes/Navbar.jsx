@@ -3,6 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 import menuIcon from "../assets/menu-icon.svg";
+import closeIcon from "../assets/close-icon.svg";
 
 const Link = ({page, selectedPage, setSelectedPage}) => {
     const lowerCasePage = page.toLowerCase();
@@ -64,6 +65,45 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
                     >
                         <img src={menuIcon} alt="menu-icon"/>
                     </button>
+                )}
+
+                {/* MOBILE MENU POPUP */}
+                {!isAboveSmallScreens && isMenuToggled && (
+                    <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                        {/* CLOSE ICON */}
+                        <div className="flex justify-end p-12">
+                            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                <img src={closeIcon} alt="close-icon"/>
+                            </button>
+                        </div>
+
+                        {/* MENU ITEMS */}
+                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                            <Link
+                            page="Home"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                            />
+
+                            <Link
+                            page="Skills"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                            />
+
+                            <Link
+                            page="Projects"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                            />
+
+                            <Link
+                            page="Contact"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                            />
+                        </div>
+                    </div>
                 )}
             </div>
         </nav>
