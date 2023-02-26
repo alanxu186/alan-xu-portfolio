@@ -4,7 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import profile from "../assets/my-profile-pic.jpg";
 
-import SocialMediaIcons from "../scenes/SocialMediaIcons";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Landing = ({ setSelectedPage }) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
