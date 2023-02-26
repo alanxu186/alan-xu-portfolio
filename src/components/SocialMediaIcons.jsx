@@ -10,7 +10,7 @@ const SocialMediaIcons = () => {
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                <img src={linkedin} alt="linked-icon" />
+                <img src={require('../assets/linkedin.png')} alt="linked-icon" />
             </a>
 
             <a
@@ -19,7 +19,7 @@ const SocialMediaIcons = () => {
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                <img src={github} alt="github-icon" />
+                <img src={require('../assets/github.png')} alt="github-icon" />
             </a>
         </div>
     )
