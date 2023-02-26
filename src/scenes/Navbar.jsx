@@ -2,12 +2,9 @@ import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 
-import menuIcon from "../assets/menu-icon.svg";
-import closeIcon from "../assets/close-icon.svg";
-
-const Link = ({page, selectedPage, setSelectedPage}) => {
+const Link = ({ page, selectedPage, setSelectedPage }) => {
     const lowerCasePage = page.toLowerCase();
-    
+
     return (
         <AnchorLink className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
             hover:text-yellow transition duration-500`}
@@ -19,14 +16,14 @@ const Link = ({page, selectedPage, setSelectedPage}) => {
     )
 }
 
-const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
     //toggle hamburger menu on mobile devices
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
     //navbar will change red once moved away from top of the screen
     const navbarBackground = isTopOfPage ? "" : "bg-red";
- 
+
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
@@ -61,10 +58,10 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
                     </div>
                 ) : (
                     <button
-                    className="rounded-full bg-red p-2"
-                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                        className="rounded-full bg-red p-2"
+                        onClick={() => setIsMenuToggled(!isMenuToggled)}
                     >
-                        <img src={require('../assets/menu-icon.svg')} alt="menu-icon"/>
+                        <img src={require('../assets/menu-icon.svg')} alt="menu-icon" />
                     </button>
                 )}
 
@@ -74,34 +71,34 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
                         {/* CLOSE ICON */}
                         <div className="flex justify-end p-12">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                <img src={require('../assets/close-icon.svg')} alt="close-icon"/>
+                                <img src={require('../assets/close-icon.svg')} alt="close-icon" />
                             </button>
                         </div>
 
                         {/* MENU ITEMS */}
                         <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
                             <Link
-                            page="Home"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
+                                page="Home"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
                             />
 
                             <Link
-                            page="Skills"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
+                                page="Skills"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
                             />
 
                             <Link
-                            page="Projects"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
+                                page="Projects"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
                             />
 
                             <Link
-                            page="Contact"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
+                                page="Contact"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
                             />
                         </div>
                     </div>
