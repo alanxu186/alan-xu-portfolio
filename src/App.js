@@ -2,6 +2,7 @@ import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
 import Navbar from "./scenes/Navbar";
+import Projects from "./scenes/Projects";
 
 import LineGradient from "./components/LineGradient";
 
@@ -14,7 +15,7 @@ function App() {
   //state of navbar background change
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   //check if min-width is less than/greater than 1060px
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)"); 
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,15 +39,21 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        <Landing 
+        <Landing
           setSelectedPage={setSelectedPage}
         />
       </div>
 
-      <LineGradient/>
+      <LineGradient />
 
       <div className="w-5/6 mx-auto md:h-full">
-        <MySkills/>
+        <MySkills />
+      </div>
+
+      <LineGradient />
+
+      <div className="w-5/6 mx-auto">
+        <Projects />
       </div>
     </div>
   );
