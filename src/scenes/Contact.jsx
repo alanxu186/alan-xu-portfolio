@@ -20,7 +20,8 @@ const Contact = () => {
         <section id="contact" className="py-48">
             {/* HEADINGS */}
             <motion.div
-                className="flex justify-center w-full"
+                // className="flex justify-center w-full"
+                className="md:w-2/6 mx-auto text-center"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -43,18 +44,6 @@ const Contact = () => {
             {/* IMAGE AND FORM */}
             <div className="md:flex md:justify-center gap-16 mt-5">
                 <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        hidden: { opacity: 0, y: -50 },
-                        visible: { opacity: 1, y: 0 },
-                    }}>
-                    {/* <img src={require('../assets/contact-image.jpeg')} alt="contact-img" /> */}
-                </motion.div>
-
-                <motion.div
                     className="basis-1/2 mt-10 md:mt-0"
                     initial="hidden"
                     whileInView="visible"
@@ -70,6 +59,7 @@ const Contact = () => {
                         onSubmit={onSubmit}
                         action="https://formsubmit.co/994cc0c2f6174177a0465de5f8de43fb"
                         method="POST"
+                        className="flex flex-col items-center justify-center"
                     >
                         <input
                             className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
