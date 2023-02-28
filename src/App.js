@@ -1,5 +1,6 @@
 import Contact from "./scenes/Contact";
 import DotGroup from "./scenes/DotGroup";
+import Footer from "./scenes/Footer";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
 import Navbar from "./scenes/Navbar";
@@ -62,6 +63,8 @@ function App() {
       <div className="w-5/6 mx-auto md:h-full">
         <Contact/>
       </div>
+
+      <Footer/>
     </div>
   );
 }
