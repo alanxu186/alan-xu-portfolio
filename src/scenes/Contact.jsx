@@ -20,7 +20,7 @@ const Contact = () => {
         <section id="contact" className="py-48">
             {/* HEADINGS */}
             <motion.div
-                className="flex justify-end w-full"
+                className="flex justify-center w-full"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -32,7 +32,7 @@ const Contact = () => {
             >
                 <div>
                     <p className="font-playfair font-semibold text-4xl mb-5 text-red">
-                        <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+                        CONTACT ME
                     </p>
                     <div className="flex md:justify-end my-5">
                         <LineGradient width="w-1/4" />
@@ -41,9 +41,8 @@ const Contact = () => {
             </motion.div>
 
             {/* IMAGE AND FORM */}
-            <div className="md:flex md:justify-between gap-16 mt-5">
+            <div className="md:flex md:justify-center gap-16 mt-5">
                 <motion.div
-                    className="basis-1/2 flex justify-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -52,7 +51,7 @@ const Contact = () => {
                         hidden: { opacity: 0, y: -50 },
                         visible: { opacity: 1, y: 0 },
                     }}>
-                    <img src={require('../assets/contact-image.jpeg')} alt="contact-img" />
+                    {/* <img src={require('../assets/contact-image.jpeg')} alt="contact-img" /> */}
                 </motion.div>
 
                 <motion.div
