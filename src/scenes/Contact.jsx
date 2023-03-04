@@ -113,7 +113,7 @@ const Contact = () => {
 
                         <button
                             type="submit"
-                            className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500">
+                            className="p-5 bg-sleepy-blue font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500">
                             SEND ME A MESSAGE
                         </button>
                     </form>

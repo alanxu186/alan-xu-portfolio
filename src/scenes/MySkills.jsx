@@ -112,7 +112,7 @@ const MySkills = () => {
                                 Imaginative
                             </p>
                         </div>
-                        <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]"></div>
+                        <div className="w-1/2 md:w-3/4 h-32 bg-sleepy-blue absolute right-0 top-0 z-[-1]"></div>
                     </div>
                     <p className="mt-5">
                         Thirderino, some random line of temporary text because this section is still in works and will contain my featured set of skills that I have yet to put.

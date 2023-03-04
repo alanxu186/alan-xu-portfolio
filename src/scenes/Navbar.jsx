@@ -6,8 +6,8 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     const lowerCasePage = page.toLowerCase();
 
     return (
-        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
-            hover:text-yellow transition duration-500`}
+        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-sleepy-blue" : ""}
+            hover:text-sleepy-blue transition duration-500`}
             href={`#${lowerCasePage}`}
             onClick={() => setSelectedPage(lowerCasePage)}
         >
@@ -22,7 +22,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
     //navbar will change red once moved away from top of the screen
-    const navbarBackground = isTopOfPage ? "" : "bg-red";
+    const navbarBackground = isTopOfPage ? "" : "bg-stone";
 
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
