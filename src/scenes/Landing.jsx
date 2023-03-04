@@ -43,9 +43,8 @@ const Landing = ({ setSelectedPage }) => {
                         </span>
                     </p>
 
-                    <p className="mt-10 mb-7 text-sm text-center md:text-start">
-                        Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-                        viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+                    <p className="mt-10 mb-7 text-md text-center md:text-start">
+                        Hello!, my name is Alan Xu and I'm a fullstack developer who specializes in frontend development. I'm dedicated to creating interfaces that are both visually appealing and user-friendly, and I'm always looking for new ways to push the boundaries of what's possible in this field.
                     </p>
                 </motion.div>
 
