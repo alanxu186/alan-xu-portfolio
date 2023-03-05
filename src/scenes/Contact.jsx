@@ -120,9 +120,8 @@ const Contact = () => {
                         </button>
                     </form>
                 </motion.div>
-
             </div>
-                <ScrollToTop />
+            {/* <ScrollToTop /> */}
         </section>
     )
 
