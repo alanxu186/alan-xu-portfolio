@@ -2,6 +2,8 @@ import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 
+import ScrollToTop from "../components/ScrollToTop";
+
 const Contact = () => {
     const {
         register,
@@ -118,7 +120,9 @@ const Contact = () => {
                         </button>
                     </form>
                 </motion.div>
+
             </div>
+                <ScrollToTop />
         </section>
     )
 

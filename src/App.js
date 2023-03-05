@@ -5,6 +5,7 @@ import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
 import Navbar from "./scenes/Navbar";
 import Projects from "./scenes/Projects";
+import ScrollToTop from "./components/ScrollToTop";
 
 // import LineGradient from "./components/LineGradient";
 
@@ -19,8 +20,11 @@ function App() {
   //check if min-width is less than/greater than 1060px
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
+
   useEffect(() => {
     const handleScroll = () => {
+      //if y pixel is 0, don't show navbar
+      //if y pixel is not 0, show navbar
       if (window.scrollY === 0) setIsTopOfPage(true);
       if (window.scrollY !== 0) setIsTopOfPage(false);
     }
@@ -28,6 +32,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <div className="app bg-deep-blue">
@@ -61,9 +66,13 @@ function App() {
       </div>
 
       <div className="w-5/6 mx-auto md:h-full">
-        <Contact/>
+        <Contact />
+
       </div>
 
+      {/* <div className="w-5/6 mx-auto md:h-full">
+        <ScrollToTop />
+      </div> */}
       {/* <Footer/> */}
     </div>
   );
